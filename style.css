@@ -613,7 +613,7 @@ main {
 /* Timeline Styles */
 .timeline {
     position: relative;
-    max-width: 800px;
+    /* max-width: 800px; */
     margin: 0 auto;
 }
 
@@ -651,29 +651,6 @@ main {
     transform: translate(-50%, -50%);
 }
 
-/* Timeline Content */
-/* .timeline-content {
-    background: var(--bg-secondary);
-    padding: 20px;
-    border-radius: var(--radius-12);
-    box-shadow: var(--shadow-1);
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-}
-
-.role-title {
-    font-size: var(--fs-4);
-    color: var(--scarlet);
-    margin-bottom: 5px;
-}
-
-.company-name {
-    font-size: var(--fs-5);
-    font-weight: var(--fw-700);
-    color: var(--raw-seinna);
-    margin-bottom: 10px;
-} */
 .timeline-content {
     background: var(--bg-secondary);
     padding: 20px;
@@ -746,6 +723,71 @@ main {
     text-align: right;
 }
 
+.timeline-content li {
+    list-style: none;
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    font-size: var(--fs-5);
+    color: var(--color-primary);
+    line-height: 1.6;
+}
+
+.timeline-content li:before {
+    content: '\2022';
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--sizzling-sunrise);
+}
+
+.timeline-content li:hover {
+    background-color: var(--bg-secondary);
+    padding-left: 35px;
+    transition: padding-left 0.3s ease, background-color 0.3s ease;
+}
+
+.awards {
+    margin-top: 10px;
+    font-size: var(--fs-5);
+    color: var(--scarlet);
+}
+
+.awards ul {
+    list-style-type: square;
+    margin-left: 20px;
+    font-size: var(--fs-6);
+    color: var(--color-primary);
+    line-height: 1.5;
+}
+
+
+.education {
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-radius: var(--radius-12);
+    box-shadow: var(--shadow-1);
+    margin-bottom: 40px;
+}
+
+
+.university-name {
+    font-size: var(--fs-5);
+    color: var(--raw-seinna);
+    font-weight: var(--fw-700);
+    margin-bottom: 5px;
+}
+
+.edu-description {
+    font-size: var(--fs-5);
+    color: var(--color-primary);
+    line-height: 1.6;
+    font-style: italic;
+}
+
+
 
 /* responsive for larger than 550px screen */
 @media (min-width: 550px) {
@@ -812,16 +854,14 @@ main {
     /* Experience */
     .timeline-item:nth-child(odd) .timeline-content {
         margin-left: calc(50% + 10px);
-        width: 45%; /* Alternating cards */
+        width: 48%;
         text-align: left;
         align-items: flex-start;
     }
 
     .timeline-item:nth-child(even) .timeline-content {
         margin-right: calc(50% + 10px);
-        width: 45%;
-        text-align: right;
-        align-items: flex-end;
+        width: 48%;
     }
     
 }
@@ -1022,12 +1062,12 @@ main {
 
     .timeline-item:nth-child(odd) .timeline-content {
         margin-left: calc(50% + 20px);
-        width: 40%; /* Adjust width */
+        width: 48%; /* Adjust width */
     }
 
     .timeline-item:nth-child(even) .timeline-content {
         margin-right: calc(50% + 20px);
-        width: 40%; /* Adjust width */
+        width: 48%; /* Adjust width */
     }
 
 }
@@ -1059,12 +1099,12 @@ main {
 
     .timeline-item:nth-child(odd) .timeline-content {
         margin-left: calc(50% + 30px);
-        width: 35%; /* Compact width */
+        width: 49%; /* Compact width */
     }
 
     .timeline-item:nth-child(even) .timeline-content {
         margin-right: calc(50% + 30px);
-        width: 35%; /* Compact width */
+        width: 49%;
     }
 
     .timeline-duration {
