@@ -406,23 +406,27 @@ main {
 
 
 /* About Section */
-.about { padding-block: var(--section-padding); }
+.about {
+    padding-block: var(--section-padding);
+}
 
 .about-banner {
-  max-width: 400px;
-  margin-inline: auto;
-  margin-bottom: 80px;
+    max-width: 400px;
+    margin-inline: auto;
+    margin-bottom: 80px;
 }
 
 .about .btn {
-  max-width: unset;
-  width: 100%;
+    max-width: unset;
+    width: 100%;
 }
 
-.about .btn-secondary { margin-bottom: 10px; }
+.about .btn-secondary {
+    margin-bottom: 10px;
+}
 
 .section-i-do {
-    margin-top:  70px;
+    margin-top: 70px;
 }
 
 .section-i-do ul {
@@ -449,6 +453,67 @@ main {
     box-shadow: 0 4px 8px var(--card-shadow);
 }
 
+/* Skill Section */
+.skills-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-secondary);
+    line-height: 1.8;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-buttons button:hover {
+    background-color: var(--sizzling-sunrise);
+    color: var(--black);
+}
+
+.filter-buttons button.active {
+    background-color: var(--raw-seinna);
+    color: var(--black);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-card {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--shadow-1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card img {
+    width: 60%;
+    height: auto;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
 
 /* responsive for larger than 550px screen */
 @media (min-width: 550px) {
@@ -457,10 +522,9 @@ main {
         margin-inline: auto;
     }
 
-    
-
-
-    .section-title { max-width: 380px; }
+    .section-title {
+        max-width: 380px;
+    }
 }
 
 /* responsive for larger than 768px screen */
@@ -469,7 +533,9 @@ main {
         max-width: 720px;
     }
 
-    .section-title { max-width: 430px; }
+    .section-title {
+        max-width: 430px;
+    }
 
     /* About Section */
     .btn-group {
@@ -485,6 +551,11 @@ main {
 
     .about .btn-secondary {
         margin-bottom: 0;
+    }
+
+    /* Skill */
+    .filter-buttons {
+        flex-wrap: wrap;
     }
 }
 
@@ -505,22 +576,22 @@ main {
     .section-content {
         position: relative;
         padding-left: 40px;
-      }
-    
-      .section-subtitle {
+    }
+
+    .section-subtitle {
         position: absolute;
         top: 0;
         left: 0;
         transform: rotate(0.75turn) translateX(-100%);
         transform-origin: left top;
         margin-bottom: 0;
-      }
-    
-      .section-subtitle::after {
+    }
+
+    .section-subtitle::after {
         top: 8px;
         left: auto;
         right: calc(100% + 20px);
-      }
+    }
 
     /* REUSED STYLE */
     .container {
@@ -668,9 +739,9 @@ main {
     }
 
     .section-i-do {
-        margin-top:  0;
+        margin-top: 0;
     }
-    
+
 }
 
 
@@ -680,7 +751,9 @@ main {
         max-width: 1150px;
     }
 
-    .section-title { max-width: 460px; }
+    .section-title {
+        max-width: 460px;
+    }
 
     /* Hero Section */
     .hero-social-list {
