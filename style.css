@@ -604,7 +604,7 @@ main {
 .end-icon {
     font-size: 3rem;
     color: var(--sizzling-sunrise);
-    /* margin: 20px auto; */
+    margin: 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -620,7 +620,7 @@ main {
 .timeline:before {
     content: '';
     position: absolute;
-    top: 5px;
+    top: 0;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -636,23 +636,11 @@ main {
     align-items: center;
 }
 
-.timeline-item:nth-child(odd) .timeline-content {
-    margin-left: calc(50% + 20px);
-    text-align: left;
-    align-items: flex-start;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-    margin-right: calc(50% + 20px);
-    text-align: right;
-    align-items: flex-end;
-}
-
 .timeline-item:nth-child(odd):before,
 .timeline-item:nth-child(even):before {
     content: '';
     position: absolute;
-    top: 15px;
+    top: 0;
     width: 20px;
     height: 20px;
     background: var(--sizzling-sunrise);
@@ -669,7 +657,7 @@ main {
     padding: 20px;
     border-radius: var(--radius-12);
     box-shadow: var(--shadow-1);
-    width: 45%;
+    width: 90%;
     display: flex;
     flex-direction: column;
 }
@@ -722,6 +710,11 @@ main {
     }
 
     
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        margin: 0;
+        width: 90%;
+    }
 
 }
 
@@ -758,6 +751,19 @@ main {
     }
 
     /* Experience */
+    .timeline-item:nth-child(odd) .timeline-content {
+        margin-left: calc(50% + 10px);
+        width: 45%; /* Alternating cards */
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-right: calc(50% + 10px);
+        width: 45%;
+        text-align: right;
+        align-items: flex-end;
+    }
     
 }
 
@@ -955,6 +961,16 @@ main {
         margin-left: 0;
     }
 
+    .timeline-item:nth-child(odd) .timeline-content {
+        margin-left: calc(50% + 20px);
+        width: 40%; /* Adjust width */
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-right: calc(50% + 20px);
+        width: 40%; /* Adjust width */
+    }
+
 }
 
 
@@ -976,6 +992,24 @@ main {
 
     .scroll-down {
         right: -80px;
+    }
+
+    .timeline-content {
+        padding: 30px; /* More padding for large screens */
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+        margin-left: calc(50% + 30px);
+        width: 35%; /* Compact width */
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-right: calc(50% + 30px);
+        width: 35%; /* Compact width */
+    }
+
+    .timeline-duration {
+        font-size: var(--fs-5);
     }
 
     
