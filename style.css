@@ -266,6 +266,7 @@ body {
     color: var(--raw-seinna);
     margin-left: 2px;
 }
+
 .nav-toggle-btn {
     position: relative;
     transform: rotate(-55deg);
@@ -365,6 +366,7 @@ body {
 .navbar-link:is(:hover, :focus)::before {
     width: 100%;
 }
+
 /* Hero Section */
 main {
     overflow-x: hidden;
@@ -405,8 +407,6 @@ main {
 
 
 /* responsive for larger than 550px screen */
-
-
 @media (min-width: 550px) {
     .container {
         max-width: 550px;
@@ -573,11 +573,19 @@ main {
         height: 2px;
         background: var(--color-secondary);
     }
+
+        /* About Section */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 30px;
+        }
+    
 }
 
 
 /* responsive for larger than 1200px screen */
-
 @media (min-width: 1200px) {
     .container {
         max-width: 1150px;
@@ -591,4 +599,5 @@ main {
     .scroll-down {
         right: -80px;
     }
+
 }
