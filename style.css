@@ -517,6 +517,71 @@ main {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Projects */
+.project { padding-block: var(--section-padding); }
+  
+  .project-list > li { margin-bottom: 25px; }
+  
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-12);
+    box-shadow: 2px 4px 6px hsla(0, 0%, 0%, 0.2);
+  }
+  
+  .project-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    transition: var(--transition-1);
+  }
+  
+  .project-card:is(:hover, :focus)::after {
+    background: hsla(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(0.5px);
+  }
+  
+  .project-card .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .project-card .card-title { margin-bottom: 10px; }
+  
+  .project-card :is(.card-title, .publish-date) {
+    background: var(--bg-primary);
+    padding: 6px 12px;
+    width: max-content;
+    box-shadow: var(--shadow-1);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: var(--transition-1);
+  }
+  
+  .project-card .publish-date {
+    font-size: var(--fs-6);
+    color: var(--color-primary);
+    transition-delay: 0s;
+  }
+  
+  .project-card:is(:hover, :focus) :is(.card-title, .publish-date) {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .project-card:is(:hover, :focus) .publish-date { transition-delay: 0.1s; }
+  
+  .load-more {
+    font-size: var(--fs-4);
+    color: var(--raw-seinna);
+    text-decoration: underline;
+    margin-inline: auto;
+  }
+
 
 
 /* responsive for larger than 550px screen */
@@ -529,6 +594,13 @@ main {
     .section-title {
         max-width: 380px;
     }
+
+    .project-list {
+        column-count: 2;
+        column-gap: 25px;
+      }
+    
+      .project-list > li:first-child { column-span: all; }
 }
 
 /* responsive for larger than 768px screen */
@@ -744,6 +816,15 @@ main {
 
     .section-i-do {
         margin-top: 0;
+    }
+
+    /* Project Section */
+    .project-list { column-count: 3; }
+  
+    .project-list > li:first-child {
+      column-span: unset;
+      margin: 25px;
+      margin-left: 0;
     }
 
 }
