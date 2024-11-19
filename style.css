@@ -420,6 +420,15 @@ main {
     color: var(--sizzling-sunrise)
 }
 
+.hero-social-link i{
+    font-size: 1.5rem;
+}
+
+.hero-social-link:is(:hover, :focus) .tooltip {
+    --trans-x: 0;
+    opacity: 1;
+}
+
 .hero-content {
     position: absolute;
     top: 50%;
@@ -1101,6 +1110,7 @@ textarea.input-field {
         top: 50%;
         right: 5%;
         transform: translateY(-50%);
+        max-width: 30px;
     }
 
     .hero-social-link {
