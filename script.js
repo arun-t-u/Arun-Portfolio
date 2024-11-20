@@ -1,15 +1,30 @@
 // element toggle function
-const elemToggleFunc = function (elem) { elem.classList.toggle("active"); }
+const elemToggleFunc = function (elem) { 
+    elem.classList.toggle("active"); 
+}
 
 
 // Navbar Toggle
 const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
 const navbar = document.querySelector("[data-navbar]");
+const navLinks = document.querySelectorAll(".navbar-link");
 
 navToggleBtn.addEventListener("click", function () {
     elemToggleFunc(navToggleBtn);
     elemToggleFunc(navbar);
     elemToggleFunc(document.body);
+});
+
+// Close navbar when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener("click", function () {
+        // Ensure the navbar closes only when it's active
+        if (navbar.classList.contains("active")) {
+            elemToggleFunc(navToggleBtn);
+            elemToggleFunc(navbar);
+            elemToggleFunc(document.body);
+        }
+    });
 });
 
 
