@@ -666,7 +666,7 @@ main {
     margin-bottom: 10px;
 }
 
-.project-card :is(.card-title, .publish-date) {
+.project-card :is(.card-title, .github-repo) {
     background: var(--bg-primary);
     padding: 6px 12px;
     width: max-content;
@@ -676,19 +676,36 @@ main {
     transition: var(--transition-1);
 }
 
-.project-card .publish-date {
+.project-card .github-repo {
     font-size: var(--fs-6);
     color: var(--color-primary);
     transition-delay: 0s;
 }
 
-.project-card:is(:hover, :focus) :is(.card-title, .publish-date) {
+.project-card:is(:hover, :focus) :is(.card-title, .github-repo) {
     transform: translateY(0);
     opacity: 1;
 }
 
-.project-card:is(:hover, :focus) .publish-date {
+.project-card:is(:hover, :focus) .github-repo {
     transition-delay: 0.1s;
+}
+
+.github-link {
+    position: relative;
+    background: var(--raw-seinna);
+    color: var(--white);
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    transition: var(--transition-1);
+}
+
+.github-link:is(:hover, :focus) {
+    background: var(--raw-seinna);
+    color: var(--white);
 }
 
 .load-more {
